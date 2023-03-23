@@ -1,0 +1,61 @@
+.blind{
+    position: absolute;
+    margin: -1px;
+    width: 1px;height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.container{
+    margin-top: 64px;
+}
+
+.inner{
+    margin: 0 auto;
+    position: relative;
+    padding: 0 104px;
+    max-width: 1408px;
+}
+
+.header .inner,
+.footer .inner{
+    max-width: 1920px;
+} 
+.header .util-list .lang-link1 span::after,
+.header .logo a, .sc-search .search-inner::before, .sc-teams .link-info .info-title span::after
+, .swiper .btn-wrap .btn-nav, .sc-board .link-board::after,.footer .relate-site button::before{
+    background-image: url(../images/icon.png);
+    background-repeat: no-repeat;
+    background-size: 328px 205px;
+}
+
+/* 항상 최소치를 보고 잡아야 안깨진다. */
+
+/* 작은pc */
+/* 1025까지는 잘 나와야함 */
+@media(max-width:1230px){
+    /* 헤더부분 */
+    .container{
+        margin-top: 60px;
+    }
+    .header .side-nav .side-title .teams::after,
+    .header .logo a,.header .btn-menu.active,.select-area .btn-close,
+    .header .btn-menu,.sc-search .search2 .search-title::after{
+        background-image: url(../images/icon-m.png);
+        background-repeat: no-repeat;
+        background-size: 195px 181px;
+    }
+}
+/* 태블릿 */
+/* 768까지 */
+@media(max-width:1024px){
+    .inner{
+        padding: 0 50px;
+    }
+}
+/* 모바일 */
+/* 320까지 */
+@media(max-width:767px){
+    .inner{
+        padding: 0 22px
+    }
+}
